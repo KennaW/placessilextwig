@@ -4,12 +4,19 @@
     {
         private $city_name;
         private $date;
+        private $number_days;
 
-        function __construct($user_city_name, $user_date)
+        function __construct($user_city_name, $user_date, $number_days)
         {
             $this->city_name = $user_city_name;
             $this->date = $user_date;
+            $this->number_days = $number_days;
 
+        }
+
+        function setNumberDays($new_number_days)
+        {
+            $this->number_days = (int) $new_number_days;
         }
 
         function setDate($new_date)
@@ -30,6 +37,10 @@
         function getCityName()
         {
             return $this->city_name;
+        }
+        function getNumberDays()
+        {
+            return $this->number_days;
         }
 
         function save()

@@ -20,7 +20,7 @@
     });
 
     $app->post("/places", function () use ($app) {
-        $city = new Place($_POST['city_name'], $_POST['date']);
+        $city = new Place($_POST['city_name'], $_POST['date'], $_POST['number_days']);
         $city->save();
         return $app['twig']->render('create_city.twig', array('newplace' => $city));
     });

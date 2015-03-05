@@ -10,6 +10,7 @@
             {% for place in places %}
                 <li>{{ place.getCityName }}</li>
                 <li>{{ place.getDate }}</li>
+                <li>{{ place.getNumberDays }}</li>
             {% endfor %}
 
         </ul>
@@ -23,6 +24,10 @@
                 <div class='form_group'>
                 <label for='date'>Date</label>
                 <input id='date' name='date' type='text'>
+                </div>
+                <div class='form_group'>
+                <label for='number_days'>Number of days spent there:</label>
+                <input id='number_days' name='number_days' type='text'>
                 </div>
                 <button type='submit'>Add City</button>
             </form>
